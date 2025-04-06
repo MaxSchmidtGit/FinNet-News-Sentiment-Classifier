@@ -62,3 +62,11 @@ Add a database to store historical predictions
 
 Style the frontend further or embed into dashboards
 
+MIT License
+
+Copyright (c) 2025 Max Schmidt
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+...
+
+
