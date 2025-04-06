@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FinNet – News Sentiment Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FinNet – News Sentiment Classifier</h1>
+        <form method="POST" action="/">
+            <input type="text" name="headline" placeholder="Enter financial news headline" required>
+            <button type="submit">Classify</button>
+        </form>
+
+        {% if sentiment %}
+        <div class="result">
+            <p><strong>Headline:</strong> {{ headline }}</p>
+            <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+            <p><strong>Confidence:</strong> {{ confidence }}%</p>
+        </div>
+        {% endif %}
+
+        <hr>
+
+        <button onclick="fetchNews()">🔄 Fetch Live Crypto News</button>
+        <div id="news-container"></div>
+    </div>
+
+    <script src="/static/main.js"></script>
+</body>
+</html>
